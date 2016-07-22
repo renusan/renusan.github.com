@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>爱心小鱼</title>
+  <style>
+  body {
+    margin: 0;
+    background: url(src/pattern10.jpg) repeat;
+  }
+  #container {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-left: -400px;
+    margin-top: -300px;
+    box-shadow: 0 0 10px #233;
+    border: 10px solid rgba(255,255,255,.8);
+  }
+  .canvas-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+  }
+  canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #canvasFront {
+    z-index: 1;
+  }
+  #canvasBack {
+    z-index: 0;
+  }
+  p {
+    line-height: 30px;
+    color: #fff;
+    padding-top: 10px;
+    font-size: 14px;
+    letter-spacing: .8px;
+  }
+  </style>
+</head>
+<body>
+  <section id="container">
+    <div class="canvas-wrap">
+      <canvas id="canvasFront" width="800" height="600"></canvas>
+      <canvas id="canvasBack" width="800" height="600"></canvas>
+    </div>
+    <p>
+      游戏规则：操作大鱼收集果实喂给小鱼，喂养时分数累加，小鱼的生命值根据大鱼携带的果实数量恢复。
+      <br>
+      积分规则：一个成熟的果实得20分，生长中的果实得10分，每次加分=分数X蓝色果实数量，计分后重置数量。
+    </p>
+  </section>
+  <script src="./js/require.js" data-main="./js/main"></script>
+</body>
+</html>
