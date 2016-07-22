@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>爆炸效果</title>
+  <style>
+  #box{
+    width: 700px;
+    height: 400px;
+    margin: 200px auto;
+    position: relative;
+    box-shadow: 0 0 6px #ccc;
+    background: url(img/1.jpg) no-repeat 0 0/700px 400px;
+  }
+  #box span{
+    position: absolute;
+    background: url(img/0.jpg) no-repeat 0 0/700px 400px;
+  }
+  </style>
+  <script>
+    function css(obj,json) {
+      for (var name in json) {
+        obj.style[name] = json[name]
+      }
+    }
+
+    function rand(n,m) {
+      return parseInt(Math.random()*(m-n)+n);
+    }
+
+    window.onload = function(){
+      var oBox = document.querySelector('#box'),
+          R = 4,
+          C = 7,
+          iW = oBox.offsetWidth/C,
+          iH = oBox.offsetHeight/R;
+
+      for (var i=0; i<R; i++) {
+        for (var j=0; j<C; j++) {
+          var oSpan = document.createElement('span');
+          css(oSpan,{
+            width: iW + 'px',
+            height: iH + 'px',
+            left: iW*j + 'px',
+            top: iH*i + 'px',
+            backgroundPosition: -iW*j + 'px -' + iH*i+'px'
+          });
+          oBox.appendChild(oSpan);
+          oSpan.dataset.row = i;
+          oSpan.dataset.col = j;
+        }
+      }
+      
+      var aSpan = oBox.querySelectorAll('span');
+      var iNow = 0;
+      var bSys = true;
+
+      oBox.onclick = function (){
+        if (!bSys) return;
+        bSys = false;
+        iNow++;
+        for (var i = 0; i < aSpan.length; i++) {
+          var x = (aSpan[i].offsetLeft+aSpan[i].offsetWidth/2) - oBox.offsetWidth/2;
+          var y = (aSpan[i].offsetTop+aSpan[i].offsetHeight/2) - oBox.offsetHeight/2;
+
+          css(aSpan[i],{
+            transition: '1s all cubic-bezier(1,0.13,0,0.99)',
+            transform: 'perspective(800px) scale(1.4) translate('+x+'px,'+y+'px) rotateX('+rand(0,180)+'deg) rotateY('+rand(0,180)+'deg)',
+            opacity: 0
+          });
+        }
+        aSpan[0].addEventListener('transitionend',function(){
+          for (var i = 0; i < aSpan.length; i++) {
+            css(aSpan[i],{
+              transition: 'none',
+              transform: '',
+              opacity: 1,
+              backgroundImage: 'url(img/'+iNow%4+'.jpg)'
+            });
+          }
+          oBox.style.backgroundImage = 'url(img/'+(iNow+1)%4+'.jpg)';
+          bSys = true;
+        },false);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="box"></div>
+</body>
+</html>

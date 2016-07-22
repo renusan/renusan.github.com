@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <style>
+  *{ margin: 0; padding: 0; list-style: none; box-sizing: content-box; }
+  .w{
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    color: #f3f8f1;      
+    position: relative;
+  }
+  .w li{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    text-align: center;
+    line-height: 300px;
+    font-size: 100px;
+    background-color: #424b50;
+    opacity: 0;
+    transition: .6s all ease;
+  }
+  .w .now{
+    z-index: 99;
+    opacity: 1;
+  }
+  .w .prev1{
+    transform: perspective(800px) translateX(-200px) rotateY(30deg) scale(.9);
+    opacity: .8;
+  }
+  .w .prev2{
+    transform: perspective(800px) translateX(-300px) rotateY(30deg) scale(.8);
+    opacity: .6;
+  }
+  .w .next1{
+    transform: perspective(800px) translateX(200px) rotateY(-30deg) scale(.9);
+    opacity: .8;
+  }
+  .w .next2{
+    transform: perspective(800px) translateX(300px) rotateY(-30deg) scale(.8);
+    opacity: .6;
+  }
+  .nav{
+    width: 100%;
+    text-align: center;
+  }
+  .nav input{
+    width: 100px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  </style>
+  <script>
+    window.onload = function(){
+      var oNav = document.querySelector('.nav'),
+          aLi = document.querySelectorAll('.w li'),
+          arr = [];
+
+      for (var i = 0; i < aLi.length; i++) {
+        arr.push(aLi[i].className);
+      }
+      var bSys = true;
+      oNav.onclick = function(ev){
+        var oEv = ev || event;
+        var oT = oEv.target || oEv.srcElement;
+        if (!bSys) return;
+        if (oT.nodeName.toLowerCase() !== 'input') return;
+        bSys = false;
+        switch(oT.value){
+          case 'Prev':
+            arr.push(arr.shift());
+          break;
+          case 'Next':
+            arr.unshift(arr.pop());
+          break;
+          default:
+            return false;
+          break;
+        }
+        for (var i = 0; i < aLi.length; i++) {
+          aLi[i].className = arr[i];
+          aLi[i].addEventListener('transitionend',function(){
+            bSys = true;
+          },false);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <ul class="w">
+    <li class="prev3"><img src="img/0.jpg" height="100%" width="100%" alt=""></li>
+    <li class="prev2"><img src="img/1.jpg" height="100%" width="100%" alt=""></li>
+    <li class="prev1"><img src="img/2.jpg" height="100%" width="100%" alt=""></li>
+    <li class="now"><img src="img/3.jpg" height="100%" width="100%" alt=""></li>
+    <li class="next1"><img src="img/4.jpg" height="100%" width="100%" alt=""></li>
+    <li class="next2"><img src="img/5.jpg" height="100%" width="100%" alt=""></li>
+    <li class="next3"><img src="img/6.jpg" height="100%" width="100%" alt=""></li>
+  </ul>
+  <div class="nav">
+    <input type="button" value="Prev">
+    <input type="button" value="Next">
+  </div>
+</body>
+</html>

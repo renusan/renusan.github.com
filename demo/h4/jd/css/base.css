@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* @date    2016-04-07 18:25:13 */
+/* reset */
+* { margin: 0; padding: 0;}
+body { font-size: 12px; line-height: 150%; color: #333; font-family: "Microsoft Yahei"; }
+ul,li { list-style: none;}
+h1,h2,h3,h4,h5,h6,strong,b { font-size: 16px; font-weight: normal;}
+em,i { font-style: normal;}
+a { text-decoration: none; color: #666;}
+a:hover { color: #C81623; }
+img { display: block; }
+.fl { float: left;}
+.fr { float: right;}
+.abs { position: absolute; }
+.rel { position: relative; }
+.clearfix:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/* end reset*/

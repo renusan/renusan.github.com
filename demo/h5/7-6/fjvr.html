@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>反转效果</title>
+  <style>
+  #box{
+    width: 700px;
+    height: 400px;
+    margin: 200px auto;
+    position: relative;
+    box-shadow: 0 0 6px #ccc;
+    background: url(img/1.jpg) no-repeat 0 0/700px 400px;
+  }
+  #box span{
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: 1s all ease;
+    transform: perspective(800px) rotateY(0deg);
+  }
+  #box span>*{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+  }
+  #box span em{
+    background: url(img/0.jpg) no-repeat 0 0/700px 400px;
+    backface-visibility: hidden;
+    z-index: 2;
+  }
+  #box span i{
+    background: url(img/1.jpg) no-repeat 0 0/700px 400px;
+    z-index: 1;
+    transform: scale(-1,1);
+  }
+  </style>
+  <script>
+    function css(obj,json) {
+      for (var name in json) {
+        obj.style[name] = json[name]
+      }
+    }
+
+    function rand(n,m) {
+      return parseInt(Math.random()*(m-n)+n);
+    }
+
+    window.onload = function(){
+      var oBox = document.querySelector('#box'),
+          R = 4,
+          C = 7,
+          iW = oBox.offsetWidth/C,
+          iH = oBox.offsetHeight/R;
+
+      for (var i=0; i<R; i++) {
+        for (var j=0; j<C; j++) {
+          var oSpan = document.createElement('span');
+          oSpan.innerHTML = '<em></em><i></i>';
+          css(oSpan,{
+            width: iW + 'px',
+            height: iH + 'px',
+            left: iW*j + 'px',
+            top: iH*i + 'px',
+            backgroundPosition: -iW*j + 'px -' + iH*i+'px'
+          });
+          oBox.appendChild(oSpan);
+          oSpan.children[0].style.backgroundPosition = '-' + iW*j + 'px -' + iH*i+'px';
+          oSpan.children[1].style.backgroundPosition = '-' + iW*j + 'px -' + iH*i+'px';
+          oSpan.dataset.row = i;
+          oSpan.dataset.col = j;
+        }
+      }
+      
+      var aSpan = oBox.querySelectorAll('span');
+      var iNow = 0;
+
+      oBox.onclick = function () {
+        for (var i = 0; i < aSpan.length; i++) {
+          css(aSpan[i],{
+            transition: '1s '+ i*60 +'ms all ease',
+            transform: 'perspective(800px) rotateY(180deg)'
+          });
+        }
+      }
+      aSpan[aSpan.length-1].addEventListener('transitionend',function(){
+        iNow ++;
+        for (var i = 0; i < aSpan.length; i++) {
+          css(aSpan[i],{
+            transition: 'none',
+            transform: 'perspective(800px) rotateY(0deg)'
+          });
+          aSpan[i].querySelector('em').style.backgroundImage = 'url(img/'+ iNow%4 +'.jpg)';
+          aSpan[i].querySelector('i').style.backgroundImage = 'url(img/'+ (iNow+1)%4 +'.jpg)';
+        }
+      },false);
+    }
+  </script>
+</head>
+<body>
+  <div id="box"></div>
+</body>
+</html>

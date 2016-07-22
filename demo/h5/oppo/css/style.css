@@ -1,0 +1,1037 @@
+@charset "UTF-8";
+.w {
+  width: 1180px;
+  margin: 0 auto;
+}
+.hide {
+  display: none;
+}
+a:hover,
+a:hover p {
+  color: #0D925F !important;
+}
+.header .top {
+  padding-top: 10px;
+  background-color: #2B2B2B;
+  border-top: 3px solid #00925F;
+  padding-bottom: 2px;
+  width: 100%;
+  min-width: 1180px;
+}
+.header .top .w {
+  *zoom: 1;
+}
+.header .top .w:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .top .w a {
+  color: #B2B2B2;
+  display: block;
+}
+.header .top .w div {
+  *zoom: 1;
+}
+.header .top .w div:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .top .w div.contact {
+  float: left;
+}
+.header .top .w div.contact ul {
+  *zoom: 1;
+}
+.header .top .w div.contact ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .top .w div.contact ul li {
+  float: left;
+}
+.header .top .w div.contact ul li.fore1 a,
+.header .top .w div.contact ul li.fore2 a {
+  background: url(../images/top_sprite.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.header .top .w div.contact ul li.fore2 a {
+  background-position: -20px 0;
+  margin: 0 14px;
+}
+.header .top .w div.contact ul li.fore3 a {
+  color: #0D925F;
+  font-weight: bold;
+}
+.header .top .w div.login {
+  float: right;
+  border-right: 1px solid #474747;
+  padding-bottom: 10px;
+}
+.header .top .w div.login ul {
+  *zoom: 1;
+}
+.header .top .w div.login ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .top .w div.login ul li {
+  float: left;
+}
+.header .top .w div.login ul li.spacer {
+  width: 1px;
+  height: 15px;
+  background-color: #474747;
+}
+.header .top .w div.login ul li a {
+  padding: 0 15px;
+}
+.header .top .w div.login ul li.cart {
+  padding: 0 20px 0 20px;
+  position: relative;
+}
+.header .top .w div.login ul li.cart i {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/top_sprite.png) -40px 0;
+}
+.header .nav {
+  height: 85px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.header .nav .w {
+  *zoom: 1;
+}
+.header .nav .w:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .nav .w h1 {
+  float: left;
+  width: 168px;
+  height: 85px;
+  box-sizing: content-box;
+  text-indent: -9999px;
+  background: url(../images/logo.png) no-repeat;
+}
+.header .nav .w ul {
+  *zoom: 1;
+  float: right;
+}
+.header .nav .w ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .nav .w ul li {
+  float: left;
+}
+.header .nav .w ul li a {
+  line-height: 85px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #2B2B2B;
+}
+.main .banner {
+  background-color: #F1F1F1;
+  height: 620px;
+  width: 100%;
+  min-width: 1180px;
+  position: relative;
+}
+.main .banner .bd-top {
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  z-index: 99;
+}
+.main .banner .img-cont {
+  width: 100%;
+  min-width: 1180px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #F0CDC7;
+}
+.main .banner .img-cont a {
+  display: block;
+}
+.main .banner .img-cont img {
+  height: 620px;
+  margin: 0 auto;
+}
+.main .banner .nav {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 3px 0 #cccccc;
+  -moz-box-shadow: 0 0 3px 0 #cccccc;
+  -ms-box-shadow: 0 0 3px 0 #cccccc;
+  -o-box-shadow: 0 0 3px 0 #cccccc;
+  box-shadow: 0 0 3px 0 #cccccc;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.main .banner .nav ul {
+  *zoom: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -28px;
+  margin-top: -6px;
+}
+.main .banner .nav ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .banner .nav ul li {
+  width: 12px;
+  height: 12px;
+  background-color: #B3B3B3;
+  float: left;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.main .banner .nav ul li.active {
+  border: 2px solid  #00925F;
+  background-color: #FFF;
+  margin-top: -2px;
+  margin-left: -2px;
+  margin-right: 8px;
+}
+.main .banner .slider-cont {
+  width: 1180px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -590px;
+  border-bottom: 1px solid  #B2B2B2;
+}
+.main .banner .slider-cont .slider {
+  height: 5px;
+  width: 240px;
+  background-color: #00925F;
+  position: absolute;
+  left: 76px;
+  bottom: -3px;
+}
+.main .oppo-star {
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 60px;
+  background-color: #F2F2F2;
+}
+.main .oppo-star .dt {
+  font-size: 26px;
+  color: #2B2B2B;
+  line-height: 50px;
+  background: url(../images/oppo_star_dt_bg.png) no-repeat center;
+}
+.main .oppo-star .dt strong {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 0 12px;
+}
+.main .oppo-star .dd {
+  color: #878787;
+  line-height: 46px;
+}
+.main .oppo-star .dd a {
+  color: #4CA57C;
+  padding-left: 14px;
+}
+.main .oppo-star .mb-list {
+  width: 100%;
+  min-width: 1180px;
+  overflow: hidden;
+}
+.main .oppo-star .mb-list ul {
+  *zoom: 1;
+  width: 1200px;
+}
+.main .oppo-star .mb-list ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-star .mb-list ul li {
+  float: left;
+  border-right: 1px solid #EAEAEA;
+  padding-right: 10px;
+  margin-right: 9px;
+  width: 280px;
+}
+.main .oppo-star .mb-list ul li img {
+  -webkit-box-shadow: 0px 10px 8px -5px #5a5555;
+  -moz-box-shadow: 0px 10px 8px -5px #5a5555;
+  -ms-box-shadow: 0px 10px 8px -5px #5a5555;
+  -o-box-shadow: 0px 10px 8px -5px #5a5555;
+  box-shadow: 0px 10px 8px -5px #5a5555;
+}
+.main .oppo-star .mb-list ul li h3 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  padding: 42px 0 8px 0;
+}
+.main .oppo-star .mb-list ul li p {
+  font-size: 12px;
+  line-height: 12px;
+  color: #B4B4B4;
+  padding: 6px 0;
+}
+.main .oppo-star .mb-list ul li span a {
+  color: #00925F;
+  display: block;
+  padding: 6px 0;
+  border-bottom: 5px solid  #DFDFDF;
+  background: url(../images/oppo_star_bg.png) no-repeat 190px center;
+}
+.main .oppo-accessory {
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 60px;
+  background-color: #F6F6F6;
+}
+.main .oppo-accessory .dt {
+  font-size: 26px;
+  color: #2B2B2B;
+  line-height: 50px;
+  background: url(../images/oppo_star_dt_bg.png) no-repeat center;
+}
+.main .oppo-accessory .dt strong {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 0 12px;
+}
+.main .oppo-accessory .dd {
+  color: #878787;
+  line-height: 46px;
+}
+.main .oppo-accessory .dd a {
+  color: #4CA57C;
+  padding-left: 14px;
+}
+.main .oppo-accessory .item-list {
+  padding-top: 46px;
+  *zoom: 1;
+}
+.main .oppo-accessory .item-list:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-accessory .item-list div.left,
+.main .oppo-accessory .item-list div.right {
+  width: 580px;
+}
+.main .oppo-accessory .item-list div.left .items,
+.main .oppo-accessory .item-list div.right .items {
+  position: relative;
+}
+.main .oppo-accessory .item-list div.left .items .img,
+.main .oppo-accessory .item-list div.right .items .img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.main .oppo-accessory .item-list div.left .items .text,
+.main .oppo-accessory .item-list div.right .items .text {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+.main .oppo-accessory .item-list div.left .items .text p,
+.main .oppo-accessory .item-list div.right .items .text p {
+  color: #8F8F8F;
+  line-height: 24px;
+}
+.main .oppo-accessory .item-list div.left .items .text h5,
+.main .oppo-accessory .item-list div.right .items .text h5 {
+  color: #565656;
+  font-size: 18px;
+  line-height: 30px;
+}
+.main .oppo-accessory .item-list div.left .items .text span,
+.main .oppo-accessory .item-list div.right .items .text span {
+  color: #008E59;
+}
+.main .oppo-accessory .item-list div.left.left,
+.main .oppo-accessory .item-list div.right.left {
+  float: left;
+}
+.main .oppo-accessory .item-list div.left.left .top,
+.main .oppo-accessory .item-list div.right.left .top {
+  *zoom: 1;
+}
+.main .oppo-accessory .item-list div.left.left .top:after,
+.main .oppo-accessory .item-list div.right.left .top:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-accessory .item-list div.left.left .top div.items,
+.main .oppo-accessory .item-list div.right.left .top div.items {
+  width: 280px;
+  background-color: #FFF;
+}
+.main .oppo-accessory .item-list div.left.left .top div.items.item1,
+.main .oppo-accessory .item-list div.right.left .top div.items.item1 {
+  height: 576px;
+  float: left;
+}
+.main .oppo-accessory .item-list div.left.left .top div.items.item2,
+.main .oppo-accessory .item-list div.right.left .top div.items.item2,
+.main .oppo-accessory .item-list div.left.left .top div.items.item3,
+.main .oppo-accessory .item-list div.right.left .top div.items.item3 {
+  height: 278px;
+  float: right;
+}
+.main .oppo-accessory .item-list div.left.left .top div.items.item2,
+.main .oppo-accessory .item-list div.right.left .top div.items.item2 {
+  margin-bottom: 20px;
+  border: 5px solid  #EAEAEA;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .oppo-accessory .item-list div.left.left .top div.items.item1,
+.main .oppo-accessory .item-list div.right.left .top div.items.item1,
+.main .oppo-accessory .item-list div.left.left .top div.items.item3,
+.main .oppo-accessory .item-list div.right.left .top div.items.item3 {
+  border-bottom: 4px solid #EAEAEA;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .oppo-accessory .item-list div.left.left .bot div.items,
+.main .oppo-accessory .item-list div.right.left .bot div.items {
+  width: 580px;
+  background-color: #FFF;
+}
+.main .oppo-accessory .item-list div.left.left .bot div.items.item4,
+.main .oppo-accessory .item-list div.right.left .bot div.items.item4 {
+  height: 300px;
+  border-bottom: 4px solid #EAEAEA;
+  margin-top: 20px;
+}
+.main .oppo-accessory .item-list div.left.right,
+.main .oppo-accessory .item-list div.right.right {
+  float: right;
+}
+.main .oppo-accessory .item-list div.left.right .top div.items,
+.main .oppo-accessory .item-list div.right.right .top div.items {
+  width: 580px;
+  background-color: #FFF;
+}
+.main .oppo-accessory .item-list div.left.right .top div.items.item4,
+.main .oppo-accessory .item-list div.right.right .top div.items.item4 {
+  height: 300px;
+  border-bottom: 4px solid #EAEAEA;
+  margin-bottom: 20px;
+}
+.main .oppo-accessory .item-list div.left.right .bot div.items,
+.main .oppo-accessory .item-list div.right.right .bot div.items {
+  width: 280px;
+  background-color: #FFF;
+}
+.main .oppo-accessory .item-list div.left.right .bot div.items.item1,
+.main .oppo-accessory .item-list div.right.right .bot div.items.item1 {
+  height: 576px;
+  float: left;
+}
+.main .oppo-accessory .item-list div.left.right .bot div.items.item2,
+.main .oppo-accessory .item-list div.right.right .bot div.items.item2,
+.main .oppo-accessory .item-list div.left.right .bot div.items.item3,
+.main .oppo-accessory .item-list div.right.right .bot div.items.item3 {
+  height: 278px;
+  float: right;
+}
+.main .oppo-accessory .item-list div.left.right .bot div.items.item2,
+.main .oppo-accessory .item-list div.right.right .bot div.items.item2 {
+  margin-bottom: 20px;
+  border: 5px solid  #EAEAEA;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .oppo-accessory .item-list div.left.right .bot div.items.item1,
+.main .oppo-accessory .item-list div.right.right .bot div.items.item1,
+.main .oppo-accessory .item-list div.left.right .bot div.items.item3,
+.main .oppo-accessory .item-list div.right.right .bot div.items.item3 {
+  border-bottom: 4px solid #EAEAEA;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .oppo-accessory .item-list div.left .item2,
+.main .oppo-accessory .item-list div.right .item2 {
+  padding: 0 30px;
+}
+.main .oppo-accessory .item-list div.left .item2 h4,
+.main .oppo-accessory .item-list div.right .item2 h4 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #576267;
+  line-height: 50px;
+}
+.main .oppo-accessory .item-list div.left .item2 ul,
+.main .oppo-accessory .item-list div.right .item2 ul {
+  width: 100%;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 26px 0 20px 10px;
+  *zoom: 1;
+}
+.main .oppo-accessory .item-list div.left .item2 ul:after,
+.main .oppo-accessory .item-list div.right .item2 ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li,
+.main .oppo-accessory .item-list div.right .item2 ul li {
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  text-align: left;
+  padding-bottom: 16px;
+  *zoom: 1;
+  width: 105px;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li:after,
+.main .oppo-accessory .item-list div.right .item2 ul li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li i.icon {
+  width: 22px;
+  height: 18px;
+  float: left;
+  background: url(../images/left_item_2_sprite.png) no-repeat 0 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li.fore1 i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li.fore1 i.icon {
+  background-position: 0 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li.fore2 i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li.fore2 i.icon {
+  background-position: -22px 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li.fore3 i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li.fore3 i.icon {
+  background-position: -44px 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li.fore4 i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li.fore4 i.icon {
+  background-position: -66px 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li.fore5 i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li.fore5 i.icon {
+  background-position: -88px 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li.fore6 i.icon,
+.main .oppo-accessory .item-list div.right .item2 ul li.fore6 i.icon {
+  background-position: -111px 0;
+}
+.main .oppo-accessory .item-list div.left .item2 ul li a,
+.main .oppo-accessory .item-list div.right .item2 ul li a {
+  float: left;
+  color: #B2B2B2;
+  padding-top: 3px;
+}
+.main .oppo-accessory .item-list div.left .item2 .all,
+.main .oppo-accessory .item-list div.right .item2 .all {
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+.main .oppo-accessory .item-list div.left .item2 .all a,
+.main .oppo-accessory .item-list div.right .item2 .all a {
+  color: #00925F;
+  background: url(../images/oppo_star_bg.png) no-repeat right center;
+  padding-right: 20px;
+}
+.main .oppo-accessory .item-list div.left .item1 .text,
+.main .oppo-accessory .item-list div.right .item1 .text,
+.main .oppo-accessory .item-list div.left .item3 .text,
+.main .oppo-accessory .item-list div.right .item3 .text {
+  position: absolute;
+  left: 22px;
+  bottom: 6px;
+}
+.main .oppo-accessory .item-list div.left .item4 .text,
+.main .oppo-accessory .item-list div.right .item4 .text {
+  position: absolute;
+  left: 340px;
+  top: 100px;
+}
+.main .oppo-accessory .item-list div.right .item1 .img {
+  position: absolute;
+  left: 16px;
+  top: 0;
+}
+.main .oppo-accessory .item-list div.right .item2 .text {
+  position: absolute;
+  left: 22px;
+  bottom: 6px;
+}
+.main .oppo-accessory .item-list div.right .item2 .img {
+  position: absolute;
+  left: 64px;
+  top: 0;
+}
+.main .oppo-accessory .item-list div.right .item3 .img {
+  position: absolute;
+  left: 14px;
+  top: 0;
+}
+.main .oppo-accessory .item-list div.right .item4 .text {
+  position: absolute;
+  left: 230px;
+  top: 110px;
+}
+.main .oppo-accessory .item-list div.right .item4 .img {
+  position: absolute;
+  left: 54px;
+  top: 10px;
+}
+.main .oppo-world {
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 60px;
+  background-color: #EAEAEA;
+  border-top: 3px solid #D9D9D9;
+}
+.main .oppo-world .dt {
+  font-size: 26px;
+  color: #2B2B2B;
+  line-height: 50px;
+  background: url(../images/oppo_star_dt_bg.png) no-repeat center;
+}
+.main .oppo-world .dt strong {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 0 12px;
+}
+.main .oppo-world .dd {
+  color: #878787;
+  line-height: 46px;
+}
+.main .oppo-world .dd a {
+  color: #4CA57C;
+  padding-left: 14px;
+}
+.main .oppo-world .cont {
+  padding-top: 40px;
+  *zoom: 1;
+}
+.main .oppo-world .cont:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-world .cont .left {
+  width: 780px;
+  height: 560px;
+  float: left;
+  overflow: hidden;
+}
+.main .oppo-world .cont .left ul {
+  *zoom: 1;
+  width: 800px;
+}
+.main .oppo-world .cont .left ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-world .cont .left ul li {
+  width: 380px;
+  height: 270px;
+  border-bottom: 5px solid  #DEE1E1;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .oppo-world .cont .left ul li.fore1 {
+  background: url(../images/oppo_world_img1.png) no-repeat;
+}
+.main .oppo-world .cont .left ul li.fore2 {
+  background: url(../images/oppo_world_img2.png) no-repeat;
+}
+.main .oppo-world .cont .left ul li.fore3 {
+  background: url(../images/oppo_world_img3.png) no-repeat;
+}
+.main .oppo-world .cont .left ul li.fore4 {
+  background: url(../images/oppo_world_img4.png) no-repeat;
+}
+.main .oppo-world .cont .left ul li p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #262A29;
+  line-height: 22px;
+  padding: 34px 0 14px 0;
+}
+.main .oppo-world .cont .left ul li span {
+  display: block;
+  color: #656A63;
+  font-size: 14px;
+  line-height: 14px;
+}
+.main .oppo-world .cont .right {
+  width: 380px;
+  height: 560px;
+  float: right;
+  background-color: #fff;
+}
+.main .oppo-world .cont .right ul.title {
+  *zoom: 1;
+}
+.main .oppo-world .cont .right ul.title:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .oppo-world .cont .right ul.title li {
+  float: left;
+  cursor: pointer;
+  height: 50px;
+  line-height: 48px;
+  width: 190px;
+  background-color: #DADADA;
+  border-top: 2px solid  #DADADA;
+  color: #A7A7A7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main .oppo-world .cont .right ul.title li:hover {
+  color: #0D925F !important;
+}
+.main .oppo-world .cont .right ul.title li.active {
+  background-color: #fff;
+  border-top: 2px solid  #279564;
+}
+.main .oppo-world .cont .right ul.list-news,
+.main .oppo-world .cont .right ul.list-weibo {
+  padding: 45px 30px 0;
+}
+.main .oppo-world .cont .right ul.list-news li,
+.main .oppo-world .cont .right ul.list-weibo li {
+  height: 90px;
+  margin-bottom: 15px;
+}
+.main .oppo-world .cont .right ul.list-news li.fore1,
+.main .oppo-world .cont .right ul.list-weibo li.fore1 {
+  background: url(../images/oppo_world_right_img1.png) no-repeat #f6f6f6;
+}
+.main .oppo-world .cont .right ul.list-news li.fore2,
+.main .oppo-world .cont .right ul.list-weibo li.fore2 {
+  background: url(../images/oppo_world_right_img2.png) no-repeat #f6f6f6;
+}
+.main .oppo-world .cont .right ul.list-news li.fore3,
+.main .oppo-world .cont .right ul.list-weibo li.fore3 {
+  background: url(../images/oppo_world_right_img3.png) no-repeat #f6f6f6;
+}
+.main .oppo-world .cont .right ul.list-news li.fore4,
+.main .oppo-world .cont .right ul.list-weibo li.fore4 {
+  background: url(../images/oppo_world_right_img4.png) no-repeat #f6f6f6;
+}
+.main .oppo-world .cont .right ul.list-news li a,
+.main .oppo-world .cont .right ul.list-weibo li a {
+  padding-top: 18px;
+  line-height: 18px;
+  color: #838383;
+  display: block;
+  text-align: left;
+  padding-left: 116px;
+  padding-right: 36px;
+}
+.footer {
+  width: 100%;
+  min-width: 1180px;
+  background-color: #FFFFFF;
+}
+.footer .service {
+  padding: 46px 0 36px 0;
+  border-bottom: 1px solid #EAEAEA;
+}
+.footer .service ul {
+  *zoom: 1;
+}
+.footer .service ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .service ul li {
+  float: left;
+  width: 236px;
+  height: 42px;
+  position: relative;
+}
+.footer .service ul li i.icon {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 42px;
+  height: 42px;
+  background: url(../images/footer_sprite.png) no-repeat;
+}
+.footer .service ul li.fore1 i.icon {
+  background-position: 0px 0;
+}
+.footer .service ul li.fore2 i.icon {
+  background-position: -42px 0;
+}
+.footer .service ul li.fore3 i.icon {
+  background-position: -84px 0;
+}
+.footer .service ul li.fore4 i.icon {
+  background-position: -126px 0;
+}
+.footer .service ul li.fore5 i.icon {
+  background-position: -168px 0;
+}
+.footer .service ul li a {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  padding-left: 52px;
+  padding-top: 4px;
+}
+.footer .service ul li a p {
+  font-size: 16px;
+  color: #363636;
+  line-height: 16px;
+  padding-bottom: 6px;
+}
+.footer .service ul li a span {
+  color: #989898;
+}
+.footer .others {
+  padding-bottom: 50px;
+  padding-top: 30px;
+  *zoom: 1;
+}
+.footer .others:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .others ul.about {
+  width: 186px;
+  float: left;
+}
+.footer .others ul.about .dt {
+  padding-bottom: 18px;
+}
+.footer .others ul.about .dd {
+  padding-bottom: 10px;
+}
+.footer .others ul.about .dt a {
+  font-size: 14px;
+  line-height: 14px;
+  color: #373737;
+}
+.footer .others ul.about .dd a {
+  font-size: 12px;
+  line-height: 12px;
+  color: #838383;
+  *zoom: 1;
+  padding-left: 6px;
+}
+.footer .others ul.about .dd a:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .others ul.about .dd a i.icon {
+  width: 3px;
+  height: 3px;
+  float: left;
+  margin-top: 6px;
+  background: url(../images/footer_sprite.png) no-repeat -80px -84px;
+}
+.footer .others ul.contact .dd {
+  padding-bottom: 8px;
+}
+.footer .others ul.contact .dd a i.icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 0px;
+  background: url(../images/footer_sprite.png) no-repeat -80px -84px;
+}
+.footer .others ul.contact .fore1 a i.icon {
+  background-position: 0px -84px;
+}
+.footer .others ul.contact .fore2 a i.icon {
+  background-position: -20px -84px;
+}
+.footer .others ul.contact .fore3 a i.icon {
+  background-position: -40px -84px;
+}
+.footer .others ul.contact .fore4 a i.icon {
+  background-position: -60px -84px;
+}
+.footer .others ul.contact-us {
+  width: 206px;
+}
+.footer .others ul.contact-us li {
+  *zoom: 1;
+}
+.footer .others ul.contact-us li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .others ul.contact-us li i.icon {
+  float: left;
+  height: 42px;
+  width: 42px;
+  background: url(../images/footer_sprite.png) no-repeat;
+}
+.footer .others ul.contact-us li.fore1 {
+  padding-bottom: 20px;
+}
+.footer .others ul.contact-us li.fore1 i.icon {
+  background-position: 0px -42px;
+}
+.footer .others ul.contact-us li.fore2 i.icon {
+  background-position: -42px -42px;
+}
+.footer .others ul.contact-us li.fore1 a,
+.footer .others ul.contact-us li.fore2 a {
+  float: left;
+  padding-left: 14px;
+}
+.footer .others ul.contact-us li.fore1 a p,
+.footer .others ul.contact-us li.fore2 a p {
+  font-size: 22px;
+  color: #409F73;
+  line-height: 22px;
+  padding-bottom: 12px;
+  position: relative;
+}
+.footer .others ul.contact-us li.fore1 a span,
+.footer .others ul.contact-us li.fore2 a span {
+  color: #576267;
+}
+.footer .others ul.contact-us li.fore2 a p i.icon {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  background: url(../images/footer_sprite.png) no-repeat -84px -42px;
+}
+.footer .bottom {
+  width: 100%;
+  min-width: 1180px;
+  height: 70px;
+  background-color: #2B2B2B;
+  border-top: 5px solid  #000;
+  line-height: 70px;
+  *zoom: 1;
+}
+.footer .bottom:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .bottom .logo {
+  width: 100px;
+  height: 70px;
+  text-indent: -9999px;
+  background: url(../images/logo2.png) no-repeat;
+  float: left;
+}
+.footer .bottom .copyright {
+  color: #828282;
+  padding-left: 20px;
+  float: left;
+}
+.footer .bottom ul {
+  float: right;
+  *zoom: 1;
+}
+.footer .bottom ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .bottom ul li {
+  margin-left: 40px;
+  float: left;
+}
+.footer .bottom ul li a {
+  color: #E2E2E2;
+}

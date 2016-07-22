@@ -1,0 +1,1133 @@
+﻿@charset "UTF-8";
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.w {
+  width: 100%;
+  max-width: 1006px;
+  min-width: 960px;
+  margin: 0 auto;
+}
+a:hover {
+  color: #94B96F !important;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.topbar {
+  height: 40px;
+  background: url(../images/tpbar_bg.png) repeat-x #070707;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.topbar a {
+  color: #CCCCCC;
+  float: left;
+  line-height: 40px;
+}
+.topbar h1 a {
+  height: 40px;
+  width: 88px;
+  background: url(../images/logo.png) no-repeat center center;
+  text-indent: -9999px;
+  margin-right: 24px;
+}
+.topbar ul.menus {
+  *zoom: 1;
+}
+.topbar ul.menus:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.topbar ul.menus li {
+  float: left;
+  *zoom: 1;
+}
+.topbar ul.menus li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.topbar ul.menus li a {
+  padding: 0 8px;
+  *zoom: 1;
+}
+.topbar ul.menus li a:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.topbar ul.menus li a i.icon {
+  display: block;
+  width: 7px;
+  height: 4px;
+  background: url(../images/topbar_sprite2.png) no-repeat -223px -18px;
+  float: right;
+  margin-top: 20px;
+  margin-left: 4px;
+}
+.topbar ul.menus li.active a {
+  color: #94B96F;
+}
+.topbar div.login {
+  *zoom: 1;
+}
+.topbar div.login:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.topbar div.login a {
+  padding: 0 4px;
+}
+.topbar div.login .spacer {
+  width: 1px;
+  height: 14px;
+  background-color: #666;
+  margin: 0 8px;
+  margin-top: 14px;
+}
+.topbar form {
+  *zoom: 1;
+  overflow: hidden;
+  padding-right: 30px;
+}
+.topbar form:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.topbar form input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  float: left;
+  height: 30px;
+  margin-top: 5px;
+}
+.topbar form input.text {
+  width: 130px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #D8D8D8;
+  text-indent: 1em;
+}
+.topbar form input.btn {
+  width: 16px;
+  height: 18px;
+  background: url(../images/topbar_sprite2.png) no-repeat -223px 0;
+  margin-left: -29px;
+  margin-top: 11px;
+  cursor: pointer;
+}
+.index-main .banner {
+  padding-top: 40px;
+}
+.index-main .banner .img-cont {
+  position: relative;
+  height: 378px;
+}
+.index-main .banner .img-cont ul.imgs li {
+  display: none;
+}
+.index-main .banner .img-cont ul.imgs li.show {
+  display: block;
+}
+.index-main .banner .img-cont div.mask {
+  height: 44px;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.index-main .banner .img-cont ul.nav {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  *zoom: 1;
+  margin-left: -80px;
+}
+.index-main .banner .img-cont ul.nav:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .banner .img-cont ul.nav li {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.index-main .banner .img-cont ul.nav li.active {
+  background-color: #9EBC14;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.index-main .content {
+  width: 100%;
+  max-width: 1006px;
+  min-width: 960px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 3px 0 #cccccc;
+  -moz-box-shadow: 0 0 3px 0 #cccccc;
+  -ms-box-shadow: 0 0 3px 0 #cccccc;
+  -o-box-shadow: 0 0 3px 0 #cccccc;
+  box-shadow: 0 0 3px 0 #cccccc;
+  background-color: #F2F2F2;
+}
+.index-main .content .title {
+  *zoom: 1;
+  height: 70px;
+  padding: 0 16px;
+}
+.index-main .content .title:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .title h2 {
+  height: 46px;
+  width: 249px;
+  background: url(../images/ico_index.png) no-repeat 0 -46px;
+  text-indent: -9999px;
+  margin-top: 20px;
+}
+.index-main .content .title ul {
+  *zoom: 1;
+  padding-top: 38px;
+}
+.index-main .content .title ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .title ul li {
+  float: left;
+}
+.index-main .content .title ul li a {
+  color: #666;
+  font-size: 14px;
+  padding: 4px;
+}
+.index-main .content .title ul li a.active {
+  border-bottom: 2px solid  #690;
+  padding-bottom: 8px;
+}
+.index-main .content .title ul li a:hover {
+  background-color: #690;
+  color: #fff !important;
+}
+.index-main .content .title ul li a.active:hover {
+  background-color: #F2F2F2;
+  color: #666 !important;
+}
+.index-main .content .title ul li.spacer {
+  width: 1px;
+  height: 10px;
+  background: url(../images/ico_index.png) no-repeat -70px 0;
+  margin: 0px 15px;
+  margin-top: 4px;
+}
+.index-main .content .content-list {
+  padding-bottom: 40px;
+}
+.index-main .content .content-list ul {
+  *zoom: 1;
+  width: 1006px;
+  padding-left: 22px;
+}
+.index-main .content .content-list ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .content-list ul li {
+  float: left;
+  margin-right: 22px;
+}
+.index-main .content .content-list ul li a {
+  padding: 2px;
+  display: block;
+  background-color: #fff;
+  position: relative;
+}
+.index-main .content .content-list ul li.fore2 a {
+  margin-bottom: 20px;
+}
+.index-main .content .content-list ul li a .play-name {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 124px;
+  background: url(../images/play_name_bg.png) repeat-x;
+}
+.index-main .content .content-list ul li a .play-name .text {
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 90%;
+}
+.index-main .content .content-list ul li a .play-name h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 75px;
+  color: #fff;
+}
+.index-main .content .content-list ul li a .play-name p {
+  color: #CF9;
+}
+.index-main .content .content-list ul li a span.ico-play {
+  width: 60px;
+  height: 60px;
+  background: url(../images/ico_play_718.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  display: none;
+}
+.index-main .content .content-list ul li a:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .content-list ul li a:hover span.ico-play {
+  display: block;
+}
+.index-main .content .popular .title h2 {
+  background: url(../images/ico_index.png) no-repeat 0px -92px;
+}
+.index-main .content .popular .content-list .fore1 {
+  *zoom: 1;
+}
+.index-main .content .popular .content-list .fore1:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .popular .content-list .fore1 a:hover {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  -moz-box-shadow: 0 0 0 0 #ffffff;
+  -ms-box-shadow: 0 0 0 0 #ffffff;
+  -o-box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 #ffffff;
+}
+.index-main .content .popular .content-list .fore1:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .popular .content-list .fore1 div.info {
+  width: 220px;
+  height: 243px;
+  padding: 17px;
+  background-color: #fff;
+}
+.index-main .content .popular .content-list .fore1 div.info h4 {
+  font-size: 18px;
+  color: #333;
+}
+.index-main .content .popular .content-list .fore1 div.info p {
+  font-size: 12px;
+  color: #666;
+}
+.index-main .content .vchart .title h2 {
+  background: url(../images/ico_index.png) no-repeat 0px -138px;
+  height: 66px;
+  margin-top: 0;
+  position: relative;
+}
+.index-main .content .vchart .title h2 span.num {
+  position: absolute;
+  left: 146px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  color: fff;
+  text-indent: 0;
+}
+.index-main .content .vchart .content-list .fore1 {
+  *zoom: 1;
+}
+.index-main .content .vchart .content-list .fore1:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .vchart .content-list .fore1 a:hover {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  -moz-box-shadow: 0 0 0 0 #ffffff;
+  -ms-box-shadow: 0 0 0 0 #ffffff;
+  -o-box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 #ffffff;
+}
+.index-main .content .vchart .content-list .fore1:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .vchart .content-list .fore1 div.info {
+  width: 220px;
+  height: 243px;
+  padding: 17px;
+  background-color: #fff;
+}
+.index-main .content .vchart .content-list .fore1 div.info h4 {
+  font-size: 18px;
+  color: #333;
+}
+.index-main .content .vchart .content-list .fore1 div.info p {
+  font-size: 12px;
+  color: #666;
+}
+.index-main .content .publisher .title h2 {
+  background: url(../images/ico_index.png) no-repeat 0px -322px;
+  position: relative;
+}
+.index-main .content .publisher .title h2 span.num {
+  position: absolute;
+  left: 146px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  color: fff;
+  text-indent: 0;
+}
+.index-main .content .publisher .content-list .fore1 {
+  *zoom: 1;
+}
+.index-main .content .publisher .content-list .fore1:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .publisher .content-list .fore1 a:hover {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  -moz-box-shadow: 0 0 0 0 #ffffff;
+  -ms-box-shadow: 0 0 0 0 #ffffff;
+  -o-box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 #ffffff;
+}
+.index-main .content .publisher .content-list .fore1:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .publisher .content-list .fore1 div.info {
+  width: 220px;
+  height: 243px;
+  padding: 17px;
+  background-color: #fff;
+}
+.index-main .content .publisher .content-list .fore1 div.info h4 {
+  font-size: 18px;
+  color: #333;
+}
+.index-main .content .publisher .content-list .fore1 div.info p {
+  font-size: 12px;
+  color: #666;
+}
+.index-main .content .fan .title h2 {
+  background: url(../images/ico_index.png) no-repeat 0px -800px;
+  position: relative;
+}
+.index-main .content .fan .title h2 span.num {
+  position: absolute;
+  left: 146px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  color: fff;
+  text-indent: 0;
+}
+.index-main .content .fan .content-list .fore1 {
+  *zoom: 1;
+}
+.index-main .content .fan .content-list .fore1:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .fan .content-list .fore1 a:hover {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  -moz-box-shadow: 0 0 0 0 #ffffff;
+  -ms-box-shadow: 0 0 0 0 #ffffff;
+  -o-box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 #ffffff;
+}
+.index-main .content .fan .content-list .fore1:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .fan .content-list .fore1 div.info {
+  width: 220px;
+  height: 243px;
+  padding: 17px;
+  background-color: #fff;
+}
+.index-main .content .fan .content-list .fore1 div.info h4 {
+  font-size: 18px;
+  color: #333;
+}
+.index-main .content .fan .content-list .fore1 div.info p {
+  font-size: 12px;
+  color: #666;
+}
+.index-main .content .musician .title h2 {
+  background: url(../images/ico_index.png) no-repeat 0px -276px;
+  position: relative;
+}
+.index-main .content .musician .title h2 span.num {
+  position: absolute;
+  left: 146px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  color: fff;
+  text-indent: 0;
+}
+.index-main .content .musician .content-list .fore1 {
+  *zoom: 1;
+}
+.index-main .content .musician .content-list .fore1:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .musician .content-list .fore1 a:hover {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  -moz-box-shadow: 0 0 0 0 #ffffff;
+  -ms-box-shadow: 0 0 0 0 #ffffff;
+  -o-box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 #ffffff;
+}
+.index-main .content .musician .content-list .fore1:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .musician .content-list .fore1 div.info {
+  width: 220px;
+  height: 243px;
+  padding: 17px;
+  background-color: #fff;
+}
+.index-main .content .musician .content-list .fore1 div.info h4 {
+  font-size: 18px;
+  color: #333;
+}
+.index-main .content .musician .content-list .fore1 div.info p {
+  font-size: 12px;
+  color: #666;
+}
+.index-main .content .music-news .title {
+  *zoom: 1;
+  height: 70px;
+  padding: 0 16px;
+}
+.index-main .content .music-news .title:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .music-news .title h2 {
+  height: 46px;
+  width: 249px;
+  background: url(../images/ico_index.png) no-repeat 0 -366px;
+  text-indent: -9999px;
+  margin-top: 20px;
+}
+.index-main .content .music-news .title ul {
+  *zoom: 1;
+  padding-top: 38px;
+}
+.index-main .content .music-news .title ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .music-news .title ul li {
+  float: left;
+}
+.index-main .content .music-news .title ul li a {
+  color: #666;
+  font-size: 14px;
+  padding: 4px;
+}
+.index-main .content .music-news .title ul li a.active {
+  border-bottom: 2px solid  #690;
+  padding-bottom: 8px;
+}
+.index-main .content .music-news .title ul li a:hover {
+  background-color: #690;
+  color: #fff !important;
+}
+.index-main .content .music-news .title ul li a.active:hover {
+  background-color: #F2F2F2;
+  color: #666 !important;
+}
+.index-main .content .music-news .title ul li.spacer {
+  width: 1px;
+  height: 10px;
+  background: url(../images/ico_index.png) no-repeat -70px 0;
+  margin: 0px 15px;
+  margin-top: 4px;
+}
+.index-main .content .music-news .content-list {
+  padding-bottom: 40px;
+}
+.index-main .content .music-news .content-list ul.content-list {
+  *zoom: 1;
+  width: 1006px;
+  padding-left: 22px;
+}
+.index-main .content .music-news .content-list ul.content-list:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .music-news .content-list ul.content-list li {
+  float: left;
+  margin-right: 22px;
+}
+.index-main .content .music-news .content-list ul.content-list li a {
+  padding: 2px;
+  display: block;
+  background-color: #fff;
+  position: relative;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore2 a {
+  margin-bottom: 0px;
+}
+.index-main .content .music-news .content-list ul.content-list li a .play-name {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 124px;
+  background: url(../images/play_name_bg.png) repeat-x;
+}
+.index-main .content .music-news .content-list ul.content-list li a .play-name .text {
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 90%;
+}
+.index-main .content .music-news .content-list ul.content-list li a .play-name h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 75px;
+  color: #fff;
+}
+.index-main .content .music-news .content-list ul.content-list li a .play-name p {
+  color: #CF9;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore1 a .play-name h3 {
+  color: #CCFF99;
+}
+.index-main .content .music-news .content-list ul.content-list li a span.ico-play {
+  width: 60px;
+  height: 60px;
+  background: url(../images/ico_play_718.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  display: none;
+}
+.index-main .content .music-news .content-list ul.content-list li a:hover {
+  -webkit-box-shadow: 0 0 6px 0px #669900;
+  -moz-box-shadow: 0 0 6px 0px #669900;
+  -ms-box-shadow: 0 0 6px 0px #669900;
+  -o-box-shadow: 0 0 6px 0px #669900;
+  box-shadow: 0 0 6px 0px #669900;
+}
+.index-main .content .music-news .content-list ul.content-list li a:hover span.ico-play {
+  display: block;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore2 ul.news {
+  width: 224px;
+  padding: 5px 10px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore2 ul.news li {
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid  #F1F1F1;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore2 ul.news li a {
+  margin-bottom: 0px !important;
+  padding: 0;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore2 ul.news li a:hover {
+  -webkit-box-shadow: 0 0 0px 0px #669900;
+  -moz-box-shadow: 0 0 0px 0px #669900;
+  -ms-box-shadow: 0 0 0px 0px #669900;
+  -o-box-shadow: 0 0 0px 0px #669900;
+  box-shadow: 0 0 0px 0px #669900;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore1 div.play-name h3 {
+  margin-top: 86px;
+}
+.index-main .content .music-news .content-list ul.content-list li.fore2 div.play-name h3 {
+  margin-top: 95px;
+}
+.index-main .content .play-list {
+  background-color: #F2F2F2;
+  padding-bottom: 40px;
+}
+.index-main .content .play-list .title h2 {
+  background-position: 0 -598px;
+}
+.index-main .content .play-list ul.list {
+  *zoom: 1;
+  padding-left: 22px;
+}
+.index-main .content .play-list ul.list:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .play-list ul.list li {
+  width: 220px;
+  margin-right: 22px;
+  -webkit-box-shadow: 0 0 3px 0 #cccccc;
+  -moz-box-shadow: 0 0 3px 0 #cccccc;
+  -ms-box-shadow: 0 0 3px 0 #cccccc;
+  -o-box-shadow: 0 0 3px 0 #cccccc;
+  box-shadow: 0 0 3px 0 #cccccc;
+  background-color: #fff;
+  padding: 2px;
+  float: left;
+  *zoom: 1;
+}
+.index-main .content .play-list ul.list li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .play-list ul.list li a {
+  float: left;
+}
+.index-main .content .play-list ul.list li .dt {
+  color: #CC0000;
+  padding-left: 66px;
+  padding-right: 30px;
+  float: left;
+  *zoom: 1;
+  background: url(../images/v5.png) no-repeat right 2px;
+  position: relative;
+}
+.index-main .content .play-list ul.list li .dt:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .play-list ul.list li .dt i.icon {
+  position: absolute;
+  left: 10px;
+  top: -26px;
+  -webkit-box-shadow: 0 0 5px 0 #333333;
+  -moz-box-shadow: 0 0 5px 0 #333333;
+  -ms-box-shadow: 0 0 5px 0 #333333;
+  -o-box-shadow: 0 0 5px 0 #333333;
+  box-shadow: 0 0 5px 0 #333333;
+  width: 44px;
+  height: 44px;
+  background: url(../images/play_list_tzxl.png) no-repeat center center #ffffff;
+  border: 1px solid  #D5D5D5;
+}
+.index-main .content .play-list ul.list li .dd {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding: 14px 18px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.index-main .content .might-like {
+  border-top: 1px solid  #DCDCDC;
+  background-color: #fff;
+}
+.index-main .content .might-like .title {
+  background-color: #fff;
+}
+.index-main .content .might-like .title h2 {
+  background-position: 0 -736px;
+}
+.index-main .content .might-like .title ul li a {
+  background: url(../images/hryihr.png) no-repeat 0 center;
+  padding-left: 16px;
+}
+.index-main .content .might-like .title ul li a:hover {
+  color: #666!important;
+}
+.index-main .content .might-like .like-list {
+  *zoom: 1;
+  padding-left: 22px;
+}
+.index-main .content .might-like .like-list:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .might-like .like-list li {
+  float: left;
+  *zoom: 1;
+  padding: 2px;
+  background-color: #fff;
+  border: 1px solid  #E8E8E8;
+  margin-right: 22px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 224px;
+}
+.index-main .content .might-like .like-list li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index-main .content .might-like .like-list li a {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.index-main .content .might-like .like-list li a img {
+  width: 100%;
+}
+.index-main .content .might-like .like-list li a .play-name {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 124px;
+  background: url(../images/play_name_bg.png) repeat-x;
+}
+.index-main .content .might-like .like-list li a .play-name .text {
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 90%;
+}
+.index-main .content .might-like .like-list li a .play-name h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 75px;
+  color: #fff;
+}
+.index-main .content .might-like .like-list li a .play-name p {
+  color: #CF9;
+}
+.index-main .content .might-like .wrong {
+  position: relative;
+}
+.index-main .content .might-like .wrong i.icon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -22px;
+  width: 44px;
+  height: 20px;
+  background: url(../images/ico_index.png) no-repeat 0 0;
+}
+.index-main .content .might-like .wrong a {
+  margin-top: 20px;
+  border-top: 1px solid  #DCDCDC;
+  display: block;
+  height: 128px;
+  line-height: 128px;
+  background-color: #F2F2F2;
+  font-size: 24px;
+  color: #666666;
+  text-align: center;
+}
+.index-main .content .might-like .wrong a:hover {
+  color: #689A1C !important;
+}
+.index-main .content .might-like .wrong a span {
+  color: #689A1C;
+}
+.footer {
+  background-color: #F2F2F2;
+  padding-bottom: 20px;
+}
+.footer .w {
+  background-color: #fff;
+  padding-bottom: 30px;
+}
+.footer .w ul {
+  *zoom: 1;
+  margin-left: 263px;
+  padding: 34px 0 24px 0;
+}
+.footer .w ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.footer .w ul li {
+  float: left;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #666666;
+}
+.footer .w ul li i.icon {
+  height: 12px;
+  width: 1px;
+  float: right;
+  background: url(../images/ico_index.png) no-repeat -70px 0;
+  margin: 4px 12px 0;
+}
+.footer .w ul li:last-child i.icon {
+  background: none;
+}
+.footer .w .copy {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+.mv-main {
+  background: #EFEFEF;
+}
+.mv-main .title {
+  padding-top: 40px;
+}
+.mv-main .title h2 {
+  font-size: 24px;
+  line-height: 24px;
+  color: #6B9B26;
+  padding: 26px 0 34px 0;
+}
+.mv-main .title ul {
+  *zoom: 1;
+  padding: 34px 40px 0 0;
+}
+.mv-main .title ul:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.mv-main .title ul li {
+  float: left;
+  font-size: 16px;
+  line-height: 16px;
+  *zoom: 1;
+}
+.mv-main .title ul li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.mv-main .title ul li.active a {
+  border-bottom: 2px solid  #690;
+  padding-bottom: 6px;
+}
+.mv-main .title ul li a {
+  float: left;
+}
+.mv-main .title ul li i.icon {
+  width: 1px;
+  float: right;
+  height: 10px;
+  background: url(../images/ico_index.png) no-repeat -70px 0;
+  margin: 3px 16px 0;
+}
+.mv-main .mv-channel {
+  background-color: #FFF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.mv-main .mv-channel div.list-cont {
+  padding-left: 12px;
+  margin-top: 48px;
+}
+.mv-main .mv-channel div.list-cont div.list-title {
+  margin-bottom: 12px;
+  height: 44px;
+  background: url(../images/mv/sprites.png) no-repeat 0 0;
+}
+.mv-main .mv-channel div.list-cont ul.list {
+  width: 320px;
+  border: 1px solid  #CCC;
+}
+.mv-main .mv-channel div.list-cont ul.list li {
+  border-bottom: 1px solid  #F1F1F1;
+  *zoom: 1;
+}
+.mv-main .mv-channel div.list-cont ul.list li:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.mv-main .mv-channel div.list-cont ul.list li > i.num {
+  float: left;
+  line-height: 37px;
+  color: #999;
+  margin: 0 6px 0 22px;
+}
+.mv-main .mv-channel div.list-cont ul.list li > i.num.red {
+  color: #E35B72;
+}
+.mv-main .mv-channel div.list-cont ul.list li > a {
+  color: #666;
+  line-height: 37px;
+  float: left;
+  width: 94px;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.mv-main .mv-channel div.list-cont ul.list li > span {
+  color: #690;
+  line-height: 37px;
+  float: right;
+}
+.mv-main .mv-channel div.list-cont ul.list li > b.add {
+  width: 14px;
+  height: 14px;
+  background: url(../images/mv/sprites.png) no-repeat 0 -376px;
+  float: right;
+  margin: 12px 15px 0 26px;
+}
+.mv-main .mv-channel div.list-cont ul.list li.first {
+  height: 105px;
+}
+.mv-main .mv-channel div.list-cont ul.list li.first div.img-cont {
+  border: 1px solid  #CCC;
+  padding: 3px;
+  background-color: #fff;
+  margin: 9px 10px 0 17px;
+  position: relative;
+}
+.mv-main .mv-channel div.list-cont ul.list li.first div.img-cont i.num {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(208, 97, 117, 0.8);
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+}
+.mv-main .mv-channel div.list-cont ul.list li.first > span {
+  float: left;
+}
+.mv-main .footer .w {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}

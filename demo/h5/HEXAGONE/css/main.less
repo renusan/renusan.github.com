@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/**
+ * CSS
+ * @authors rus (rusyue@gmail.com)
+ * @date    2016-07-11 16:48:08
+ * @version 1.0
+ */
+//Start 复用样式
+  .abs(tl,@lef:0px,@top:0px){
+    position: absolute;
+    left: @lef; top: @top;
+  }
+  .abs(tr,@rig:0px,@top:0px){
+    position: absolute;
+    right: @rig; top: @top;
+  }
+  .abs(bl,@lef:0px,@bottom:0px){
+    position: absolute;
+    left:@lef; bottom: @bottom;
+  }
+  .abs(br,@rig:0px,@bottom:0px){
+    position: absolute;
+    right:@rig; bottom: @bottom;
+  }
+  .box-sizing(cont){
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  .box-sizing(border){
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .opa(@opa,@alp){
+    opacity:@opa;
+    filter:alpha(opacity=@alp);
+  }
+  .box-shadow(@x:0,@y:0,@blur:3px,@size:0,@color:#ccc){
+    -webkit-box-shadow: @x @y @blur @size @color;
+    -moz-box-shadow: @x @y @blur @size @color;
+    -ms-box-shadow: @x @y @blur @size @color;
+    -o-box-shadow: @x @y @blur @size @color;
+    box-shadow: @x @y @blur @size @color;
+  }
+  .clearfix(){
+      *zoom: 1;
+      &:after{
+        content: "\200B";
+        display: block;
+        height: 0;
+        clear: both;
+      }
+  }
+//End 复用样式
+
+@s: 40rem;
+//Start header
+body{
+  font-family: "Microsoft Yahei";
+}
+h1,h2,h3{
+  font-weight: 400;
+  margin: 0;
+}
+em.hr{
+  display: block;
+  width: 100%;
+  height: 2/@s;
+  background-color: #e7e7e7;
+  margin: 40/@s auto;
+}
+header{
+  width: 640/@s;
+  background-color: #344a61;
+  display: -webkit-box;
+  display: -moz-box;
+  div{
+    width: 120/@s;
+    // background-color: #d4f2e8;
+    height: 120/@s;
+    .box-sizing(border);
+    &:first-child{
+      background: url(../images/bg-nav.png) no-repeat center;
+      background-size: 28/@s 20/@s;
+      border-right: 1px solid rgba(255,255,255,.4);
+    }
+    &:last-child{
+      background: url(../images/bg-mail.png) no-repeat center;
+      background-size: 36/@s 24/@s;
+      border-left: 1px solid rgba(255,255,255,.4);
+    }
+  }
+  h1{
+    font-size: 34/@s;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    text-align: center;
+    line-height: 120/@s;
+    color: #fff;
+  }
+}
+//End header
+
+//Start content
+.container{
+  @w: 640/@s - 40*2/@s;
+  width: @w;
+  // margin-top: 4/@s;
+  border-top: 1px solid #f9f9f7;
+  padding: 0 40/@s;
+  h2{
+    font-size: 20/@s;
+    color: #d1d1d1;
+    height: 80/@s;
+    line-height: 80/@s;
+    // border-bottom: 2/@s solid #e7e7e7;
+    &+em.hr{
+      margin-top: 0;
+    }
+  }
+  section{
+    // margin-top: 40/@s;
+    .tac{
+      text-align: center;
+    }
+    .m20{
+      margin: 20/@s 0;
+    }
+    h3{
+      font-size: 28/@s;
+      font-weight: 700;
+    }
+    p{
+      font-size: 21/@s;
+      line-height: 40/@s;
+      color: #8e8e8e;
+      margin: 0;
+    }
+    &.article{
+      // border-bottom: 2/@s solid #e7e7e7;
+      .clearfix();
+      img{
+        width: 160/@s;
+        float: left;
+      }
+      article{
+        float: left;
+        width: @w - 160/@s - 40/@s;
+        padding-left: 40/@s;
+        p{
+          margin: 0;
+        }
+      }
+      ul.pic-group{
+        .clearfix();
+        padding: 0;
+        margin: 0;
+        li{
+          float: left;
+          width: 160/@s;
+          height: 160/@s;
+          list-style: none;
+          background-color: #9d2932;
+          margin-top: 40/@s;
+          position: relative;
+          &:nth-child(2),&:nth-child(5){
+            margin: 40/@s 40/@s 0;
+          }
+          &::after{
+            // TODO: 临时加个黑色mask
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.7);
+          }
+        }
+      }
+      div.wrap{
+        margin-top: 40/@s;
+        em{
+          font-size: 18/@s;
+          font-weight: 700;
+          color: #696969;
+          display: block;
+          text-align: right;
+          // text-indent: 16/@s;
+        }
+      }
+      ul.contact{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        .clearfix();
+        height: 100/@s;
+        width: 300/@s + 88/@s;
+        margin: 36/@s auto 0;
+        li{
+          width: 100/@s;
+          height: 100/@s;
+          background: no-repeat center/cover;
+          float: left;   
+          display: inline-block;       
+          &.fb{
+            background-image: url(../images/logo-fb.png);
+          }
+          &.gp{
+            background-image: url(../images/logo-gp.png);
+            margin: 0 44/@s;
+          }
+          &.tw{
+            background-image: url(../images/logo-tw.png);
+          }
+        }
+      }
+    }
+  }
+  .banner{
+    // TODO: ……
+  }
+  // TODO:placeholder
+  .plc{
+    width: 640/@s - 40*2/@s;
+    height: 300/@s;
+    line-height: 300/@s;
+    background-color: #8e8e8e;
+    text-align: center;
+  }
+}
+//End content
+
+//Start footer
+footer{
+  width: 640/@s;
+  font-size: 22/@s;
+  text-align: center;
+  .copy{
+    p{
+      color: #8b8b8b;
+    }
+  }
+  .theme-group{
+    background-color: #000;
+    padding: 20/@s 0;
+    ul{
+      margin: 0 auto;
+      padding: 0;
+      .clearfix();
+      width: (40*15)/@s;
+      li{
+        float: left;
+        width: 40/@s;
+        height: 40/@s;
+        margin-right: 40/@s;
+        &:last-child{
+          margin: 0;
+        }
+        &:nth-child(1){background-color: #789262;};
+        &:nth-child(2){background-color: #f3f8f1;};
+        &:nth-child(3){background-color: #a98175;};
+        &:nth-child(4){background-color: #8d4256;};
+        &:nth-child(5){background-color: #424b50;};
+        &:nth-child(6){background-color: #efdeb0;};
+        &:nth-child(7){background-color: #ed5736;};
+        &:nth-child(8){background-color: #9d2932;};
+      }
+    }
+    p.detail{
+      margin: 0;
+      padding-top: 20/@s;
+      font-size: 20/@s;
+      color: #828282;
+    }
+  }
+}
+//End footer

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <style>
+  * { margin: 0; padding: 0; }
+  ul,li { list-style: none; }
+
+  #cont {
+    width: 720px;
+    height: 2170px;
+    margin: 50px auto;
+    border: 1px solid  #eee;
+    overflow: hidden;
+    position: relative;
+  }
+  #cont ul {
+    width: 725px;
+    overflow: hidden;
+  }
+  #cont li {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  #cont li img {
+    height: 140px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+  }
+  #cont li .mask {
+    position: absolute;
+    left: -999px; top: -999px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    text-align: center;
+    line-height: 140px;
+    color: #f3f8f1;
+    font-size: 14px;
+    font-style: italic;
+    opacity: .4;
+    filter: alpha(opacity:40);
+  }
+  #cont li .mask a {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+  #cont li .mask a:hover {
+    text-decoration: underline;
+    text-shadow: 0px 0px 5px #fff;
+  }
+
+  #layer {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+  }
+  #layer .img-cont {
+    width: 800px;
+    height: 500px;
+    border: 5px solid  #f3f8f1;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    box-shadow: 0 0 6px #000;
+    overflow: hidden;
+  }
+  #layer .img-cont img {
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 500px;
+    color: #f3f8f1;    
+  }
+  #layer .img-cont .close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #f3f8f1;
+    font-size: 40px;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    text-shadow: 0 0 3px #000;
+    font-family: "Microsoft Yahei";
+  }
+  #layer .img-cont .close:hover {
+    text-shadow: 0px 0px 5px #fff;
+  }
+  </style>
+  <script src="js/move.js"></script>
+  <script>
+    $(function(){
+      var oCont = $('#cont');
+      var oLayer = $('#layer');
+      var aLi = $('li',oCont);
+      var oImg = $('img',oLayer)[0];
+      var oClose = $('span',oLayer)[0];
+
+      for (var i = 0; i < aLi.length; i++) {
+        aLi[i].onmouseover = function (ev) {
+          var oEvent = ev || event;
+          var iW = this.offsetWidth;
+          var iH = this.offsetHeight;
+          var oM = this.getElementsByTagName('div')[0];
+          var iDir = findDir(this,oEvent)
+          var oFrom = oEvent.fromElement || oEvent.relatedTarget;
+          if (this.contains(oFrom)) return;
+
+          switch (iDir) {
+            case 0:
+            oM.style.left = iW + 'px';
+            oM.style.top = 0 + 'px';
+            fnMove(oM,{left:0,top:0,opacity:1},{type:'ease-out',time:500})
+            break;
+            
+            case 1:
+            oM.style.top = iH + 'px';
+            oM.style.left = 0 + 'px';
+            fnMove(oM,{left:0,top:0,opacity:1},{type:'ease-out',time:500})
+            break;
+            
+            case 2:
+            oM.style.left = -iW + 'px';
+            oM.style.top = 0 + 'px';
+            fnMove(oM,{left:0,top:0,opacity:1},{type:'ease-out',time:500})
+            break;
+            
+            case 3:
+            oM.style.top = -iH + 'px';
+            oM.style.left = 0 + 'px';
+            fnMove(oM,{left:0,top:0,opacity:1},{type:'ease-out',time:500})
+            break;
+          }
+
+          // 中心放大
+          fnMove(this.children[0],{height:240,left:-120,top:-100},{type:'ease-out',time:500});
+        }
+
+        aLi[i].onmouseout = function (ev) {
+          var oEvent = ev || event;
+          var iW = this.offsetWidth;
+          var iH = this.offsetHeight;
+          var oM = this.getElementsByTagName('div')[0];
+          var iDir = findDir(this,oEvent)
+          var oToE = oEvent.toElement || oEvent.relatedTarget;
+          if (this.contains(oToE)) return;
+
+          switch (iDir) {
+            case 0:
+            fnMove(oM,{left:iW,top:0,opacity:.1},{type:'ease-out',time:500})
+            break;
+            
+            case 1:
+            fnMove(oM,{left:0,top:iH,opacity:.1},{type:'ease-out',time:500})
+            break;
+            
+            case 2:
+            fnMove(oM,{left:-iW,top:0,opacity:.1},{type:'ease-out',time:500})
+            break;
+            
+            case 3:
+            fnMove(oM,{left:0,top:-iH,opacity:.1},{type:'ease-out',time:500})
+            break;
+          }
+
+          // 中心缩小
+          fnMove(this.children[0],{height:140,left:-20,top:0},{type:'ease-out',time:500});
+        }
+
+        $('a',aLi[i])[0].onclick = function () {
+          oLayer.style.display = 'block';
+          oImg.src = this.parentNode.parentNode.children[0].src;
+        }
+      };
+
+      
+
+      oClose.onclick = function () {
+        oLayer.style.display = 'none';
+      };
+    });
+  </script>
+</head>
+<body>
+  <div id="cont">
+    <ul>
+      <li>
+        <img src="images/cat_1.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_2.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_3.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_4.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_5.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_6.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_7.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_8.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_9.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_10.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_11.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_12.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_13.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_14.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_15.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_16.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_17.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_18.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_19.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_20.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_21.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_22.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_23.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_24.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_25.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+    
+      <li>
+        <img src="images/cat_1.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_2.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_3.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_4.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_5.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_6.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_7.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_8.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_9.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_10.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_11.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_12.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_13.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_14.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_15.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_16.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_17.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_18.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_19.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_20.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_21.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_22.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_23.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_24.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_25.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+    
+      <li>
+        <img src="images/cat_1.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_2.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_3.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_4.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_5.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_6.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_7.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_8.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_9.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_10.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_11.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_12.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_13.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_14.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_15.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_16.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_17.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_18.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_19.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_20.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_21.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_22.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_23.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_24.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+      <li>
+        <img src="images/cat_25.jpg" alt="">
+        <div class="mask"><a href='javascript:;'>点击查看</a></div>
+      </li>
+    </ul>
+  </div>
+  <div id="layer">
+    <div class="img-cont">
+      <span class="close">×</span>
+      <img src="" alt="Loading……">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/Font-Awesome/css/font-awesome.min.css">
+  <style>
+  body{padding-top: 100px;}
+    .demo-section {
+      width: 1080px;
+      height: 500px;
+      background: rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      position: relative;
+    }
+    .demo-section .demo-con{
+      height: 100%;
+    }
+    .demo-section .pic-wrap {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+      -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+      -ms-box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+      -o-box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+      box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+      transition: all .4s ease;
+      padding: 20px;
+      padding-bottom: 50px;
+      width: 210px;
+      height: 240px;
+      position: absolute;
+      background-color: #fff;
+    }
+    .demo-section .pic-wrap.center {
+      width: 230px;
+      height: 260px;
+      top: 50%;
+      left: 50%;
+      margin-top: -115px;
+      margin-left: -130px;
+    }
+    .demo-section .pic {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .demo-section .pic img {
+      height: 100%;
+    }
+    .demo-section .caption {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+    .demo-section .nav {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      bottom: 10px;
+      margin-left: -114px;
+    }
+    .demo-section .nav ul {
+      padding: 0;
+    }
+    .demo-section .nav ul li {
+      display: inline-block;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      text-align: center;
+      line-height: 24px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      color: #aeaeae;
+    }
+    .demo-section .nav ul li.ac {
+      background-color: #777;
+      color: #fff;
+    }
+  </style>
+  <script src="js/modules/jquery-1.7.2.js"></script>
+  <script>
+    function RandPic(cfg){
+      this.caption = cfg.caption;
+      this.url = cfg.url;
+      this.ele = [];
+      this.init();
+    };
+
+    RandPic.prototype = {
+      init : function(){
+        this.create();
+      },
+      create : function(){
+        var oNew = $(
+          '<div class="pic-wrap">' + 
+            '<div class="pic">' + 
+              '<img src="' + this.url + '" alt="">' + 
+            '</div>' + 
+            '<div class="caption">' + this.caption + '</div>' + 
+          '</div>'
+        );
+        oNew.appendTo('#demo-con');
+        this.maxL = $('#demo-con').width()-oNew.width();
+        this.maxT = $('#demo-con').height()-oNew.height();
+        oNew.css({
+          left : this.maxL/2,
+          top : this.maxT/2
+        });
+
+        var oLi = $('<li><i class="icon-circle"></i></li>'),
+            oUl = $('#demo-section .nav ul');
+        oLi.appendTo(oUl);
+      }
+    }
+
+    function rand(n,m){
+      return parseInt(Math.random()*(m-n)+n);
+    }
+    var picdata = [
+      {"caption" : "PROJECT1", "url" : "./images/demo/img1.jpg"},
+      {"caption" : "PROJECT2", "url" : "./images/demo/img2.jpg"},
+      {"caption" : "PROJECT3", "url" : "./images/demo/img3.jpg"},
+      {"caption" : "PROJECT4", "url" : "./images/demo/img4.jpg"},
+      {"caption" : "PROJECT5", "url" : "./images/demo/img5.jpg"},
+      {"caption" : "PROJECT6", "url" : "./images/demo/img6.jpg"},
+      {"caption" : "PROJECT7", "url" : "./images/demo/img7.jpg"},
+      {"caption" : "PROJECT8", "url" : "./images/demo/img8.jpg"},
+      {"caption" : "PROJECT9", "url" : "./images/demo/img9.jpg"}
+    ];
+    $(function(){
+        var success = function(json){
+          $(json).each(function(){
+            new RandPic(this);
+          });
+          $('#demo-con').html(function(i,o){
+            return o+o;
+          });
+          var aPic = $('#demo-con .pic-wrap');
+          function fnRandPos(){
+            aPic.each(function(){
+              if ($(this).index()<aPic.size()/2) {
+                console.log($(this))
+
+                $(this).css({
+                  width : rand(170,180),
+                  height : rand(200,210),
+                  left : rand(0,220),
+                  top : rand(0,300),
+                });
+              } else {
+                console.log(this)
+                $(this).css({
+                  width : rand(160,180),
+                  height : rand(190,210),
+                  left : rand(690,900),
+                  top : rand(0,300),
+                });
+              }
+
+              $(this).css({
+                transform : 'rotate(' + rand(-20,20) + 'deg)'
+              });
+            });
+          }
+
+          fnRandPos();
+
+          var aNav = $('#demo-section .nav li'),
+              oNav = $('#demo-section .nav');
+
+          aNav.click(function(){
+            fnRandPos();
+            fnFocus($(this).index());
+          });
+          oNav.css({
+            width : aNav.size()*24,
+            marginLeft : -aNav.size()*24/2
+          });
+          fnFocus(0);
+          function fnFocus(index) {
+            var n = Math.random()>.5 ? index : index+aNav.size();
+            aNav.removeClass('ac').html('<i class="icon-circle"></i>');
+            aNav.eq(index).addClass('ac').html('<i class="icon-reply"></i>');
+            aPic.eq(n).css({
+              width : 230,
+              height : 260,
+              left : 425,
+              top : 120,
+              transform : 'rotate(0deg)'
+            })
+          }
+        }
+      success(picdata);
+    });
+  </script>
+</head>
+<body>
+  <div class="demo-section" id="demo-section">
+    <div class="demo-con" id="demo-con">
+      <!-- <div class="pic-wrap center">
+        <div class="pic">
+          <img src="images/demo/img1.jpg" alt="">
+        </div>
+        <div class="caption">PROJECT</div>
+      </div> -->
+    </div>
+    <div class="nav">
+      <ul>
+        <!-- <li class="ac"><i class="icon-reply"></i></li>
+        <li><i class="icon-circle"></i></li>
+        <li><i class="icon-circle"></i></li>
+        <li><i class="icon-circle"></i></li> -->
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
