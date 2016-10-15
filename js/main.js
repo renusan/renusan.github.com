@@ -1,5 +1,8 @@
 require.config({
   baseUrl : './js/modules/',
+  shim: {
+    easing: ['jquery']
+  },
   paths : {
     jquery : 'jquery-1.7.2',
     easing : 'jquery.easing.min',
