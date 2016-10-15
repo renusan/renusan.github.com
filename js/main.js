@@ -122,7 +122,6 @@ require(['jquery','tab','data'],function($,tab,data){
 
   (function(data){
     $(data).each(function(i,e){
-      console.log(i)
       if (i>=9) {return};
       new RandPic(this);
     });

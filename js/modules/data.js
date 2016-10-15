@@ -12,6 +12,10 @@ define(function(){
   ];
 
   var opusData = [
+    {"caption" : "圆梦易贷", "src" : "./demo/h4/ymyd/snapshot.png", "href" : "http://www.dai368.com/", "type" : "h4"},
+    {"caption" : "幸福时代", "src" : "./demo/h4/xfud/snapshot.png", "href" : "http://www.68power.com/", "type" : "h4"},
+    {"caption" : "雷迪波尔", "src" : "./demo/h4/ldbe/snapshot.png", "href" : "http://www.raidyboer.com/", "type" : "h4"},
+    {"caption" : "牙科平台移动端", "src" : "./demo/h4/yk/snapshot.png", "href" : "http://29ed80.xinyali.net/", "type" : "h5"},
     {"caption" : "京东首页", "src" : "./demo/h4/jd/snapshot.png", "href" : "./demo/h4/jd/index.html", "type" : "h4"},
     {"caption" : "音悦台", "src" : "./demo/h4/yyt/snapshot.png", "href" : "./demo/h4/yyt/index.html", "type" : "h4"},
     {"caption" : "360影视", "src" : "./demo/h4/360ys/snapshot.png", "href" : "./demo/h4/360ys/index.html", "type" : "h4"},
