@@ -125,6 +125,7 @@ a:hover {
   font-weight: 400;
 }
 .header .banner ul.con {
+  width: 4vw;
   height: 100%;
   position: absolute;
   top: 0;
@@ -138,6 +139,7 @@ a:hover {
   clear: both;
 }
 .header .banner ul.con li {
+  width: 1vw;
   height: 100%;
   float: left;
 }
